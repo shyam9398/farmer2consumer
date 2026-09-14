@@ -45,3 +45,11 @@ yarn-error.log*
 .idea/
 .DS_Store
 Thumbs.db
+@"
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+.env
+.env.local
+"@ | Set-Content .gitignore

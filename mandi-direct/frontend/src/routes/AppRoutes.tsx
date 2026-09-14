@@ -43,6 +43,7 @@ import { FarmerDemandIntelligencePage } from "@/pages/farmer/FarmerDemandIntelli
 import { FarmerDemandHistoryPage } from "@/pages/farmer/FarmerDemandHistoryPage";
 import { FarmerMatchingPage } from "@/pages/farmer/FarmerMatchingPage";
 import { MarketPricesPage } from "@/pages/farmer/MarketPricesPage";
+import { FarmerEarningsPage } from "@/pages/farmer/FarmerEarningsPage";
 
 // Buyer Pages (Phase 8 & 13)
 import { CartPage } from "@/pages/buyer/CartPage";
@@ -215,6 +216,16 @@ export const AppRoutes: React.FC = () => {
           <ProtectedRoute>
             <RoleRoute allowedRoles={["FARMER"]}>
               <FarmerMatchingPage />
+            </RoleRoute>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/farmer/earnings"
+        element={
+          <ProtectedRoute>
+            <RoleRoute allowedRoles={["FARMER"]}>
+              <FarmerEarningsPage />
             </RoleRoute>
           </ProtectedRoute>
         }
